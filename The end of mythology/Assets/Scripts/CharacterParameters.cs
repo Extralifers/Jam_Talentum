@@ -10,10 +10,13 @@ public class CharacterParameters : MonoBehaviour {
     public float speed;
     public float dashRate;
     public float dashMovement = 10000;
+    public UIRenderer UIController;
     // Use this for initialization
     void Start () {
         life = maxLife;
-	}
+        UIController = GameObject.Find("UIController").GetComponent<UIRenderer>();
+        UIController.cambiarVida();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,5 +25,6 @@ public class CharacterParameters : MonoBehaviour {
     public void quitarVida(float damage)
     {
         life -= damage;
+        UIController.cambiarVida();
     }
 }
