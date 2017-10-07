@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class UIRenderer : MonoBehaviour
 {
+    public GameObject lifePanel;
+    public GameObject character;
 
-    CharacterParameters characterInfo;
-    GameObject lifePanel;
     public GameObject hearth;
     public GameObject emptyHearth;
     // Use this for initialization
     void Start()
     {
-        characterInfo = GameObject.Find("MainCharacter").GetComponent<CharacterParameters>();
-        lifePanel = GameObject.Find("LifePanel");
+       
+        //lifePanel = GameObject.Find("LifePanel");
 
     }
 
@@ -24,6 +24,7 @@ public class UIRenderer : MonoBehaviour
     }
     public void cambiarVida()
     {
+        CharacterParameters characterInfo = character.GetComponent<CharacterParameters>();
         for (int i=0; i < lifePanel.transform.childCount; i++) {
             Destroy(lifePanel.transform.GetChild(i).gameObject);
         }

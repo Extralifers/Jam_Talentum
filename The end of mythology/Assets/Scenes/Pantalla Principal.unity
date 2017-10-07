@@ -674,6 +674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd83df8adda265478c6458f24100e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePanel: {fileID: 0}
+  character: {fileID: 0}
   hearth: {fileID: 1359614878421886, guid: 1a34e538b583618428cb60a26c08af84, type: 2}
   emptyHearth: {fileID: 0}
 --- !u!1 &876168542
@@ -855,8 +857,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd83df8adda265478c6458f24100e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearth: {fileID: 1641520205242164, guid: 2b351a6740e71f442957002a0695f7d6, type: 2}
-  emptyHearth: {fileID: 1697931703263282, guid: f34220ccdada43d49843171c519dc7b8,
+  lifePanel: {fileID: 304659770}
+  character: {fileID: 766910907}
+  hearth: {fileID: 1774572115593466, guid: 2b351a6740e71f442957002a0695f7d6, type: 2}
+  emptyHearth: {fileID: 1151572808496730, guid: bb27a501f66b1344daa579e448aea580,
     type: 2}
 --- !u!1 &1878603415
 GameObject:

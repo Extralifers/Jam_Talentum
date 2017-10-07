@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 2bd83df8adda265478c6458f24100e8f
-timeCreated: 1507384244
+timeCreated: 1507387322
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lifePanel: {instanceID: 0}
+  - hearth: {fileID: 1774572115593466, guid: 2b351a6740e71f442957002a0695f7d6, type: 2}
+  - emptyHearth: {fileID: 1151572808496730, guid: bb27a501f66b1344daa579e448aea580,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

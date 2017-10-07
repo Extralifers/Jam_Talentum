@@ -12,9 +12,12 @@ public class CharacterParameters : MonoBehaviour {
     public float dashMovement = 10000;
     public UIRenderer UIController;
     // Use this for initialization
-    void Start () {
+    void Awake()
+    {
         life = maxLife;
         UIController = GameObject.Find("UIController").GetComponent<UIRenderer>();
+    }
+    void Start () {       
         UIController.cambiarVida();
     }
 	
