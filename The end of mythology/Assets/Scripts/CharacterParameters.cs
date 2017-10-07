@@ -8,13 +8,11 @@ public class CharacterParameters : MonoBehaviour {
     public float life;
     public float damage;
     public float speed;
-
-
-	// Use this for initialization
-	void Start () {
+    public float dashRate;
+    public float dashMovement = 10000;
+    // Use this for initialization
+    void Start () {
         life = maxLife;
-        damage = 1;
-        speed = 5;
 	}
 	
 	// Update is called once per frame
