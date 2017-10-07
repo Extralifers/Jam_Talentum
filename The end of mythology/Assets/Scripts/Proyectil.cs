@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Proyectil : MonoBehaviour {
 
-	// Use this for initialization
+    // Use this for initialization
+    public float damage = 1;
     private BoxCollider2D proyectilCollider;
     void Start () { 
         proyectilCollider = GetComponent<BoxCollider2D>();
@@ -12,7 +13,6 @@ public class Proyectil : MonoBehaviour {
         {
             Debug.LogError("There is no BoxCollider Attached to the proyectile!");
         }
-      
     }
 	
 	// Update is called once per frame

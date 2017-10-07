@@ -657,7 +657,7 @@ RectTransform:
   - {fileID: 1878603416}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -7.9130006, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.483}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -826,15 +826,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11.52
       objectReference: {fileID: 0}
     - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -855,6 +855,18 @@ Prefab:
     - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.901259
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.90126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674594181198734, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.90126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d2af3b0d3cb72c409348df10474b28d, type: 2}
@@ -904,6 +916,23 @@ MonoBehaviour:
   hearth: {fileID: 1774572115593466, guid: 2b351a6740e71f442957002a0695f7d6, type: 2}
   emptyHearth: {fileID: 1151572808496730, guid: bb27a501f66b1344daa579e448aea580,
     type: 2}
+--- !u!1 &1742117543 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1405048237766302, guid: 6d2af3b0d3cb72c409348df10474b28d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1495651363}
+--- !u!114 &1742117547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742117543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b43a6923b44784fad66671a2ef4600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1878603415
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,6 +48,11 @@ public class Movement : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D colider)
     {
-        
+        Proyectil pr=colider.gameObject.GetComponent<Proyectil>();
+        if (pr != null)
+        {
+            parameters.quitarVida(pr.damage);
+            Destroy(colider.gameObject);
+        }
     }
 }
