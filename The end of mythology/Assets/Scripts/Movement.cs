@@ -8,6 +8,10 @@ public class Movement : MonoBehaviour {
 	private BoxCollider2D playerCollider;
 	private Rigidbody2D rb;
 
+	public float dashMovement = 10000;
+	public float dashRate = 1;
+	private float timeToDash = 0;
+
 	void Awake(){
 		
 		rb = GetComponent<Rigidbody2D> ();
@@ -37,6 +41,11 @@ public class Movement : MonoBehaviour {
 
 		Vector2 movement = new Vector2 (moveHorizontal,moveVertical);
 		rb.velocity = movement * speed;
+
+		if (Input.GetButtonDown ("Jump") && Time.time > timeToDash) {
+			timeToDash = Time.time + 1 / dashRate;
+			rb.AddForce (movement * dashMovement);
+		}
 
 	}
 }
