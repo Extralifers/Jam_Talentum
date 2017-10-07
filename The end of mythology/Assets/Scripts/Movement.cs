@@ -11,8 +11,8 @@ public class Movement : MonoBehaviour {
 	private float timeToDash = 0;
     public CharacterParameters parameters;
 	void Awake(){
-		
-		rb = GetComponent<Rigidbody2D> ();
+        DontDestroyOnLoad(transform.gameObject);
+        rb = GetComponent<Rigidbody2D> ();
 		playerCollider = GetComponent<BoxCollider2D> ();
 		if (playerCollider == null) {
 			Debug.LogError ("There is no BoxCollider Attached to the player!");

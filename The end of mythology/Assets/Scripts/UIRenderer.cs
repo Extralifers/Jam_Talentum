@@ -12,9 +12,7 @@ public class UIRenderer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       
-        //lifePanel = GameObject.Find("LifePanel");
-
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     // Update is called once per frame
