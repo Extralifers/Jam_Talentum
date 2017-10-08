@@ -11,6 +11,8 @@ public class CharacterParameters : MonoBehaviour {
     public float dashRate;
     public float dashMovement = 10000;
     public UIRenderer UIController;
+    public float fireRate;
+    public float fireSpeed;
     // Use this for initialization
     void Awake()
     {

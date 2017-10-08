@@ -22,8 +22,10 @@ GameObject:
   - component: {fileID: 212446373046946708}
   - component: {fileID: 114653622628025308}
   - component: {fileID: 61110868796882186}
+  - component: {fileID: 50382075076348276}
+  - component: {fileID: 114295130157943474}
   m_Layer: 0
-  m_Name: proyectil
+  m_Name: Proyectil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,12 +38,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1824949753602452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.3298025, y: -4.7513275, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50382075076348276
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1824949753602452}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61110868796882186
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -67,6 +89,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46, y: 0.83}
   m_EdgeRadius: 0
+--- !u!114 &114295130157943474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1824949753602452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65400552ae4abd49be6215707b45d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  speed: 50
 --- !u!114 &114653622628025308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b43a6923b44784fad66671a2ef4600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
   damage: 1
 --- !u!212 &212446373046946708
 SpriteRenderer:

@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Proyectil : MonoBehaviour {
 
-    // Use this for initialization
-    public float damage = 1;
     private BoxCollider2D proyectilCollider;
+    private Rigidbody2D rb;
+
+    public float speed;
+    public float damage = 1;
+
     void Start () { 
         proyectilCollider = GetComponent<BoxCollider2D>();
         if (proyectilCollider == null)
         {
             Debug.LogError("There is no BoxCollider Attached to the proyectile!");
         }
+
+        rb = GetComponent<Rigidbody2D>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	void FixedUpdate () {
+        rb.AddForce(transform.up * speed);
+    }
+
 }
