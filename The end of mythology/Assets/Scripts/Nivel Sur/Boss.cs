@@ -5,12 +5,12 @@ using UnityEngine;
 public class Boss : MonoBehaviour {
 
 	public float maxLife;
-	public float life;
+	private float life;
 	public float speed;
 
 	// Use this for initialization
 	void Start () {
-		
+		life = maxLife;
 	}
 	
 	// Update is called once per frame
@@ -20,5 +20,7 @@ public class Boss : MonoBehaviour {
 
 	public void takeDamage(float damage){
 		life -= damage;
+		if (life <= 0)
+			Destroy (this.gameObject);
 	}
 }

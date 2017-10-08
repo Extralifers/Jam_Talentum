@@ -37,4 +37,12 @@ public class Proyectil : MonoBehaviour {
         rb.AddForce(transform.up * parameters.fireSpeed);
     }
 
+	void OnCollisionEnter2D(Collision2D coll){
+		if (coll.gameObject.tag == "Boss") {
+			coll.gameObject.GetComponent<Boss> ().takeDamage (parameters.damage);
+			Destroy (this.gameObject);
+		}
+	
+	}
+
 }

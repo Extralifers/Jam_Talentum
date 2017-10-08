@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114653622628025308}
   - component: {fileID: 61110868796882186}
   - component: {fileID: 50382075076348276}
-  - component: {fileID: 114295130157943474}
   m_Layer: 0
   m_Name: proyectil
   m_TagString: Untagged
@@ -73,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -89,19 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46, y: 0.83}
   m_EdgeRadius: 0
---- !u!114 &114295130157943474
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1824949753602452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65400552ae4abd49be6215707b45d66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  speed: 50
 --- !u!114 &114653622628025308
 MonoBehaviour:
   m_ObjectHideFlags: 1
