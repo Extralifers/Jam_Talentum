@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D playerCollider;
     private Rigidbody2D rb;
 
-    private float nextFire;
+    private float nextFire = 0;
 
     private float timeToDash = 0;
 
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
             Debug.Log("Fire");
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + 1 / fireRate;
             Instantiate(projectile, transform.position, transform.rotation);
         }
     }
