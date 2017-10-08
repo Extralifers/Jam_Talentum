@@ -1072,33 +1072,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4825242818521156, guid: 12a4f88fb78c08c4c88e43bc15f90eb1, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4978218515134666, guid: 12a4f88fb78c08c4c88e43bc15f90eb1, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309124850619300, guid: 12a4f88fb78c08c4c88e43bc15f90eb1, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114344804772071004, guid: 12a4f88fb78c08c4c88e43bc15f90eb1,
-        type: 2}
-      propertyPath: speed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114344804772071004, guid: 12a4f88fb78c08c4c88e43bc15f90eb1,
-        type: 2}
-      propertyPath: fireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114344804772071004, guid: 12a4f88fb78c08c4c88e43bc15f90eb1,
-        type: 2}
-      propertyPath: fireSpeed
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12a4f88fb78c08c4c88e43bc15f90eb1, type: 2}
   m_IsPrefabParent: 0
