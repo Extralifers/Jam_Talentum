@@ -17,13 +17,19 @@ public class Anubis : MonoBehaviour {
 	public float firerate;
 	private float timeToFire = 0;
 
+	//Fase 2
+	public GameObject sandStormSpawners;
+	public GameObject sandStorm;
+	public float sandStormRate;
+	private float timeToSandStorm = 0;
+
 	//Fase 3
 	public GameObject spawners;
 	public GameObject mosca;
 	public float flyRate;
 	private float timeToPlague = 0;
 	private int actualRound = 0;
-	public int numberOfRounds;
+
 
 	void Awake () {
 		bossParameters = GetComponent<Boss> ();
@@ -53,10 +59,13 @@ public class Anubis : MonoBehaviour {
 			break;
 
 		case 2:
-			Debug.Log ("Fase 2");
+			shootAttack ();
+			SandStormAttack ();
 			break;
 
 		case 3:
+			shootAttack ();
+			SandStormAttack ();
 			flyPlague ();
 			break;
 			
@@ -91,15 +100,20 @@ public class Anubis : MonoBehaviour {
 		}
 	}
 
+	private void SandStormAttack(){
+		if (Time.time > timeToSandStorm) {
+			timeToSandStorm = Time.time + 1 / sandStormRate;
+			int child = Random.Range (0, 3);
+			Instantiate(sandStorm,sandStormSpawners.transform.GetChild(child).transform.position,sandStormSpawners.transform.GetChild(child).transform.rotation);
+		}
+	}
+
 	private void flyPlague(){
-		if (Time.time > timeToPlague && actualRound < numberOfRounds) {
+		if (Time.time > timeToPlague) {
 			timeToPlague = Time.time + 1 / flyRate;
 			for (int i = 0; i < spawners.transform.childCount; i++) {
 				Instantiate (mosca, spawners.transform.GetChild (i).position, spawners.transform.GetChild (i).rotation);
 			}
-		Debug.Log ("Dentro "+numberOfRounds);
-		actualRound++;
 		}
-		Debug.Log (numberOfRounds);
 	}
 }

@@ -167,10 +167,12 @@ MonoBehaviour:
   shootingDirection: {x: 0, y: 0, z: 0}
   shootingSpeed: 5
   firerate: 3
+  sandStormSpawners: {fileID: 0}
+  sandStorm: {fileID: 1558055266926270, guid: e33323596039b1545ad1068822c13d72, type: 2}
+  sandStormRate: 0.4
   spawners: {fileID: 0}
   mosca: {fileID: 1363075391213488, guid: 36505fa4afe3f2c46bcb47303b527ad1, type: 2}
-  flyRate: 0.7
-  numberOfRounds: 4
+  flyRate: 0.2
 --- !u!212 &212447579471645514
 SpriteRenderer:
   m_ObjectHideFlags: 1

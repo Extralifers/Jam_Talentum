@@ -11,7 +11,7 @@ public class UIRenderer : MonoBehaviour
     public GameObject emptyHearth;
 
 	void Awake(){
-		character = GameObject.FindGameObjectWithTag ("player");
+		character = GameObject.FindGameObjectWithTag ("Player");
 		if (character == null) {
 			Debug.Log ("Is the player dead or we didnt found it");
 		}
