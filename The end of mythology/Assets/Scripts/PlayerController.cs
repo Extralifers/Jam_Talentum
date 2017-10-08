@@ -45,9 +45,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetButton("FireX") || Input.GetButton("FireY")) && Time.time > nextFire)
+		if ((Input.GetAxis("FireX")!=0 || Input.GetAxis("FireY")!=0) && Time.time > nextFire)
         {
-            Shoot();
+			Shoot();
         }
     }
 

@@ -131,7 +131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4877930787089472}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &4538571644398626
 Transform:
@@ -157,7 +157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4877930787089472}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!4 &4877930787089472
 Transform:
@@ -170,9 +170,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4538571644398626}
+  - {fileID: 4309124850619300}
   - {fileID: 4825242818521156}
   - {fileID: 4978218515134666}
-  - {fileID: 4309124850619300}
   m_Father: {fileID: 4232421227070508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -187,7 +187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4877930787089472}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!50 &50674576613074790
 Rigidbody2D:
@@ -262,12 +262,12 @@ MonoBehaviour:
   maxLife: 3
   life: 0
   damage: 1
-  speed: 10
+  speed: 20
   dashRate: 1
   dashMovement: 10000
   UIController: {fileID: 0}
-  fireRate: 1
-  fireSpeed: 0
+  fireRate: 2
+  fireSpeed: 200
 --- !u!212 &212509628832946998
 SpriteRenderer:
   m_ObjectHideFlags: 1
