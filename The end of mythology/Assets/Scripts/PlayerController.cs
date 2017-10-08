@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     private BoxCollider2D playerCollider;
     private Rigidbody2D rb;
+    private Transform aim;
 
     private float nextFire = 0;
 
@@ -15,8 +16,7 @@ public class PlayerController : MonoBehaviour
     public CharacterParameters parameters;
 
     public GameObject projectile;
-    public Transform shotSpawn;
-    public float fireRate;
+    public GameObject shotSpawners;
 
     
 
@@ -34,21 +34,20 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("There is no RigidBody Attached to the player!");
         }
 
+        parameters = GetComponent<CharacterParameters>();
+
     }
     // Use this for initialization
     void Start()
     {
-        parameters = GetComponent<CharacterParameters>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if ((Input.GetButton("FireX") || Input.GetButton("FireY")) && Time.time > nextFire)
         {
-            Debug.Log("Fire");
-            nextFire = Time.time + 1 / fireRate;
-            Instantiate(projectile, transform.position, transform.rotation);
+            Shoot();
         }
     }
 
@@ -76,5 +75,25 @@ public class PlayerController : MonoBehaviour
             parameters.quitarVida(pr.damage);
             Destroy(colider.gameObject);
         }*/
+    }
+
+    void Shoot()
+    {
+        //Aim N
+        if (Input.GetAxis("FireY") > 0)
+            aim = shotSpawners.transform.GetChild(0).transform;
+        //Aim S
+        if (Input.GetAxis("FireY") < 0)
+            aim = shotSpawners.transform.GetChild(1).transform;
+        //Aim E
+        if (Input.GetAxis("FireX") > 0)
+            aim = shotSpawners.transform.GetChild(2).transform;
+        //Aim W
+        if (Input.GetAxis("FireX") < 0)
+            aim = shotSpawners.transform.GetChild(3).transform;
+
+        //Shoot    
+        nextFire = Time.time + 1 / parameters.fireRate;
+        Instantiate(projectile, aim.position, aim.rotation);
     }
 }
