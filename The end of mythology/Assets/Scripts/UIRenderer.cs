@@ -9,6 +9,14 @@ public class UIRenderer : MonoBehaviour
 
     public GameObject hearth;
     public GameObject emptyHearth;
+
+	void Awake(){
+		character = GameObject.FindGameObjectWithTag ("player");
+		if (character == null) {
+			Debug.Log ("Is the player dead or we didnt found it");
+		}
+	}
+
     // Use this for initialization
     void Start()
     {

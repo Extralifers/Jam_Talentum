@@ -43,6 +43,13 @@ public class Proyectil : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 	
+		if (coll.gameObject.tag == "Enviroment")
+			Destroy (this.gameObject);
+
+		if (coll.gameObject.tag == "Enemy") {
+			Destroy (coll.gameObject);
+			Destroy (this.gameObject);
+		}
 	}
 
 }

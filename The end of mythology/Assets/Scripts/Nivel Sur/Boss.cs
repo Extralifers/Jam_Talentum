@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour {
 
 	public float maxLife;
-	private float life;
+	public float life;
 	public float speed;
 
 	// Use this for initialization
