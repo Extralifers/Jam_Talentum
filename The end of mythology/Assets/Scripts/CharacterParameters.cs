@@ -16,7 +16,6 @@ public class CharacterParameters : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
         life = maxLife;
         UIController = GameObject.Find("UIController").GetComponent<UIRenderer>();
     }

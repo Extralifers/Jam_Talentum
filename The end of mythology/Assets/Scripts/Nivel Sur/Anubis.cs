@@ -16,12 +16,15 @@ public class Anubis : MonoBehaviour {
 	public int shootingSpeed;
 	public float firerate;
 	private float timeToFire = 0;
+	public AudioSource shootAttackSound;
 
 	//Fase 2
 	public GameObject sandStormSpawners;
 	public GameObject sandStorm;
 	public float sandStormRate;
 	private float timeToSandStorm = 0;
+	public AudioSource sandStormSound;
+
 
 	//Fase 3
 	public GameObject spawners;
@@ -95,13 +98,14 @@ public class Anubis : MonoBehaviour {
 				else
 					shootingDirection /= shootingDirection.y;
 			}
-
+			shootAttackSound.Play ();
 			Instantiate (proyectil, startShooting.transform.position, startShooting.transform.rotation);
 		}
 	}
 
 	private void SandStormAttack(){
 		if (Time.time > timeToSandStorm) {
+			sandStormSound.Play ();
 			timeToSandStorm = Time.time + 1 / sandStormRate;
 			int child = Random.Range (0, 3);
 			Instantiate(sandStorm,sandStormSpawners.transform.GetChild(child).transform.position,sandStormSpawners.transform.GetChild(child).transform.rotation);

@@ -29,7 +29,7 @@ public class SandStorm : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D (Collision2D coll){
+	void OnTriggerEnter2D (Collider2D coll){
 		if (coll.gameObject.tag == "Player") {
 			coll.gameObject.GetComponent<CharacterParameters> ().quitarVida (1);
 		}

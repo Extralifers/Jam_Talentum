@@ -38,6 +38,7 @@ public class Proyectil : MonoBehaviour {
     }
 
 	void OnCollisionEnter2D(Collision2D coll){
+		GetComponent<AudioSource> ().Play ();
 		if (coll.gameObject.tag == "Boss") {
 			coll.gameObject.GetComponent<Boss> ().takeDamage (parameters.damage);
 			Destroy (this.gameObject);

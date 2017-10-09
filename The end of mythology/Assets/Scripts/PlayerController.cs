@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<BoxCollider2D>();
         if (playerCollider == null)
@@ -92,6 +91,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("FireX") < 0)
             aim = shotSpawners.transform.GetChild(3).transform;
 
+		GetComponent<AudioSource> ().Play ();
         //Shoot    
         nextFire = Time.time + 1 / parameters.fireRate;
         Instantiate(projectile, aim.position, aim.rotation);
