@@ -8,6 +8,8 @@ public class Proyectil : MonoBehaviour {
     private Rigidbody2D rb;
     private GameObject player;
 
+    private float destroyTime = 50.0F;
+
     public CharacterParameters parameters;
 
     void Awake()
@@ -31,7 +33,10 @@ public class Proyectil : MonoBehaviour {
         }
 
         rb = GetComponent<Rigidbody2D>();
+
+        Destroy(gameObject, destroyTime * Time.deltaTime);
     }
+    
 
 	void FixedUpdate () {
         rb.AddForce(transform.up * parameters.fireSpeed);
